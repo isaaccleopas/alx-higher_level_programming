@@ -1,0 +1,72 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+Importing the function from module:
+	>>> add_integer = __import__("0-add_integer").add_integer
+
+Checking boolean values:
+	>>> add_integer(2, True)
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an Integer
+	
+	>>> add_integer(2, False)
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an Integer
+
+Checking integers and floats:
+	>>> add_integer(2, 3)
+	5
+	>>> add_integer(2, -4)
+	-2
+	>>> add_integer(3.4, 3.6)
+	6
+
+Checking TypeError exception:
+	>>> add_integer([3], 3)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+Checking multiple values addition:
+	>>> [add_integer(i, i**2) for i in range(7)]
+	[0, 2, 6, 12, 20, 30, 42]
+	
+	>>> add_integer(2, "4")
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an Integer
+
+	>>> add_integer(2, "school")
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an Integer
+	
+	>>> add_integer(2, school)
+	Traceback (most recent call last):
+	...
+	NameError: name 'school' is not defined
+	
+	>>> add_integer()
+	Traceback (most recent call last):
+	...
+	TypeError: add_integer() missing 1 required positional argument: 'a'
+	
+	>>> add_integer(2, 4, 5)
+	Traceback (most recent call last):
+	...
+	TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+	
+	>>> add_integer(2)
+	100
+
+Checking multiple values addition:
+        >>> [add_integer(i, i**2) for i in range(7)]
+        [0, 2, 6, 12, 20, 30, 42]
+
+Checking long int:
+        >>> add_integer(9999999999999, 1)
+        10000000000000

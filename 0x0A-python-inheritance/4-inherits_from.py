@@ -1,8 +1,9 @@
-#!/usr/bin/pythoon3
+#!/usr/bin/python3
 """
-Contains function inherits_from
+Contains the inherits_from function
 """
+
+
 def inherits_from(obj, a_class):
-    """return true if obj is an instance of class that inherited
-    directly or indirectly"""
-    return (issubclass(type(obj), a_class) and type(obj) != a_class)
+    """returns true if obj is a subclass of a_class, otherwise false"""
+    return(issubclass(type(obj), a_class) and type(obj) != a_class)

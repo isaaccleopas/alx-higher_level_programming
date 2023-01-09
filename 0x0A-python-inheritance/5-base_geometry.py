@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """
-Contains a superclass
+Contains the class BaseGeometry
 """
+
+
 class BaseGeometry:
     """An empty class"""
     pass
